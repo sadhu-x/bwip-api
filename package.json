@@ -1,0 +1,8 @@
+{
+  "name": "bwip-api",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "bwip-js": "^4.6.0"
+  }
+}
