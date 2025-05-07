@@ -3,17 +3,17 @@ import bwipjs from 'bwip-js';
 export default async function handler(req, res) {
   try {
     const {
-      bcid = 'code128',
+      bcid = 'qrcode',
       text = '123456789',
       scale = 2,
-      includetext = 'false'
+      // includetext = 'false'
     } = req.query;
 
     const png = await bwipjs.toBuffer({
       bcid,
       text,
       scale: parseInt(scale),
-      includetext: includetext === 'true'
+      // includetext is unnecessary for QR
     });
 
     res.setHeader('Content-Type', 'image/png');
